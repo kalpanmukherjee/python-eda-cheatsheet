@@ -34,13 +34,13 @@ df['column_name'].value_counts()
 ```python
 df.describe()
 ```
-### Show sum of all null/NaN rows in each column
-```python
-df.isnull().sum()
-```
 ### Show datatypes for all columns
 ```python
 df.info()
+```
+### Show sum of all null/NaN rows in each column
+```python
+df.isnull().sum()
 ```
 ### Heat Map of where and which columns has null/NaN values
 NOTE: *import seaborn as sns*
@@ -64,9 +64,22 @@ df['column_name'] = pd.factorize(df['column_name'])[0]
 ```python
 unique = pd.factorize(df['column_name'])[1]
 ```
+### Get unique values in any column
+```python
+df['column_name'].unique()
+```
 ### Convert column to float data type
 ```python
 df['columns_name'] = df['column_name'].astype("float")
+```
+### Make existing column the index
+```python
+df = df.set_index(df['column_name'])
+```
+### Get subset of df where column value is equal to some value
+```python
+df_bangalore = df[df['city']=='bangalore']
+df_lucknow = df[df['city']=='lucknow']
 ```
 
 
