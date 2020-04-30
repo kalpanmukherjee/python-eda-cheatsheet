@@ -26,7 +26,14 @@ df.columns
 ```python
 df['column_name'].value_counts()
 ```
-
+### Show mean, std dev, max etc for each column
+```python
+df.describe()
+```
+### Show sum of all null/NaN rows in each column
+```python
+df.isnull().sum()
+```
 
 
 
