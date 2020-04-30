@@ -18,6 +18,10 @@ df.head()
 ```python
 df.tail()
 ```
+### Show shape of the dataframe
+```python
+df.shape
+```
 ### Show all column names in the DataFrame
 ```python
 df.columns
@@ -34,6 +38,33 @@ df.describe()
 ```python
 df.isnull().sum()
 ```
+### Show datatypes for all columns
+```python
+df.info()
+```
+### Heat Map of where and which columns has null/NaN values
+NOTE: *import seaborn as sns*
+```python
+sns.heatmap(df.isnull())
+```
+### Drop multiple columns at once
+*axis=1* is for columns 
+```python
+df.drop(['column_1','column_2'],axis=1,inplace=True)
+```
+### Fill NaN values with mean value of a column
+```python
+df['column_name']=df['column_name'].fillna(df['column_name'].mean())
+```
+### Get numerical values for categorical data
+```python
+df['column_name'] = pd.factorize(df['column_name'])[0]
+```
+### Get all unique calues in categorical data
+```python
+unique = pd.factorize(df['column_name'])[1]
+```
+
 
 
 
