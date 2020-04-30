@@ -82,6 +82,66 @@ df_bangalore = df[df['city']=='bangalore']
 df_lucknow = df[df['city']=='lucknow']
 ```
 
+### Show all indexs in the dataframe
+```python
+df.index
+```
+### Convert dataframe to numpy array (column names are ignored and only float/integers allowed)
+```python
+df.to_numpy()
+```
+### Sort values by a column 
+```python
+df.sort_values(by='colName')
+```
+### Copy a whole dataframe
+```python
+df.copy()
+```
+### Drop the rows which have Nan values
+```python
+df.dropna()
+```
+### Replace Nan values with a specified value
+```python
+df.fillna(value=10)
+```
+### Return a dataframe of boolean values to check Nan values
+```python
+pd.isna(df)
+```
+### Calculate the mean of each column
+```python
+df.mean()
+```
+### Calculate the mean of each row
+```python
+df.mean(1)
+```
+### Concatenate dataframes
+```python
+pd.concat([df[:2],df[3:6]])
+```
+### Merge two dataframes with a custom index
+```python
+pd.merge(df1,df2,on='indexColName')
+```
+### Groupby column and sum
+```python
+df.groupby('colName').sum()
+```
+### Subtract all columns by a specific column
+```python
+df.subtract(df['col'],axis=0)
+```
+### Save a dataframe to csv file
+```python
+df.to_csv('filename.csv')
+```
+### Save a dataframe to excel sheet
+```python
+df.to_excel('filename.xlsx',sheet_name='Sheet1')
+```
 
 
 
