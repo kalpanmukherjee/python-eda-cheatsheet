@@ -64,6 +64,10 @@ df['column_name'] = pd.factorize(df['column_name'])[0]
 ```python
 unique = pd.factorize(df['column_name'])[1]
 ```
+### Convert column to float data type
+```python
+df['columns_name'] = df['column_name'].astype("float")
+```
 
 
 
