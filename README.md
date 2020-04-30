@@ -86,7 +86,8 @@ df_lucknow = df[df['city']=='lucknow']
 ```python
 df.index
 ```
-### Convert dataframe to numpy array (column names are ignored and only float/integers allowed)
+### Convert dataframe to numpy array 
+NOTE: Column names are ignored and only float/integers allowed
 ```python
 df.to_numpy()
 ```
