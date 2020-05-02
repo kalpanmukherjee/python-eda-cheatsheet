@@ -143,7 +143,13 @@ df.to_csv('filename.csv')
 ```python
 df.to_excel('filename.xlsx',sheet_name='Sheet1')
 ```
-
+### Label Encoding
+Will change categorical data into one column of integer data
+```python
+from sklearn.preprocessing import LabelEncoder
+label_encoder = LabelEncoder()
+integer_encoded = label_encoder.fit_transform(df['column_name'])
+```
 
 
 
