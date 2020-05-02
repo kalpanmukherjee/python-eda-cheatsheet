@@ -155,11 +155,14 @@ integer_encoded = label_encoder.fit_transform(df['column_name'])
 df_processed = pd.get_dummies(df, prefix_sep="__",columns=["column_1", "column_2"])
 ```
 ### Standard Scaling
+NOTE: Make sure you use *fit_transform* only on train dataset and use just *transform* for test and post-deployment dataset
 ```python
 from sklearn.preprocessing import StandardScaler
 scaler = StandardScaler()
-scaled_data = scaler.fit_transform(data)
+train_data = scaler.fit_transform(train_data)
+test_data = scaler.transform(test_data)
 ```
+
                               
 
 
