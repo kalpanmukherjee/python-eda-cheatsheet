@@ -154,6 +154,12 @@ integer_encoded = label_encoder.fit_transform(df['column_name'])
 ```python
 df_processed = pd.get_dummies(df, prefix_sep="__",columns=["column_1", "column_2"])
 ```
+### Standard Scaling
+```python
+from sklearn.preprocessing import StandardScaler
+scaler = StandardScaler()
+scaled_data = scaler.fit(data)
+```
                               
 
 
