@@ -150,6 +150,11 @@ from sklearn.preprocessing import LabelEncoder
 label_encoder = LabelEncoder()
 integer_encoded = label_encoder.fit_transform(df['column_name'])
 ```
+### One hot encoding / Get dummies
+```python
+df_processed = pd.get_dummies(df, prefix_sep="__",columns=["column_1", "column_2"])
+```
+                              
 
 
 
