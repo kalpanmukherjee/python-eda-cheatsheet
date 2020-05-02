@@ -158,7 +158,7 @@ df_processed = pd.get_dummies(df, prefix_sep="__",columns=["column_1", "column_2
 ```python
 from sklearn.preprocessing import StandardScaler
 scaler = StandardScaler()
-scaled_data = scaler.fit(data)
+scaled_data = scaler.fit_transform(data)
 ```
                               
 
